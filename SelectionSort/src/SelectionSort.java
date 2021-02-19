@@ -1,10 +1,10 @@
 
 public class SelectionSort {
 	public static void main(String [] args) {
-		SelectionSort();
+		selectionSort();
 	}
 	
-	public static void SelectionSort() {
+	public static void selectionSort() {
 		
 	}
 }

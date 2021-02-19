@@ -1,13 +1,9 @@
 
-public class QuickSort {
+public class SortComparator {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		quickSort();
-	}
-	
-	public static void quickSort() {
-		
+
 	}
 
 }

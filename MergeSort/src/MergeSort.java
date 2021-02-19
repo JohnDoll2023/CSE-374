@@ -1,12 +1,12 @@
 
-public class QuickSort {
+public class MergeSort {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		quickSort();
+		mergeSort();
 	}
 	
-	public static void quickSort() {
+	public static void mergeSort() {
 		
 	}
 
