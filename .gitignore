@@ -8,3 +8,11 @@
 .metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat
 .metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
 .metadata/version.ini
+*.dat
+*.index
+*.resources
+*.txt
+*.log
+.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps
+*.xmi
+*.prefs
