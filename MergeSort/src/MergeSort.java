@@ -1,7 +1,5 @@
-import java.util.Arrays;
-
 public class MergeSort {
-
+	
 	public static void main(String[] args) {
 		int[] arr = {8, 3, 5, 9, 21, 6, 5, -1, 20, 0}; 
 		mergeSort(arr, 0, arr.length - 1);

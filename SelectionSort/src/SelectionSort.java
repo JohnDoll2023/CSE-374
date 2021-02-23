@@ -1,4 +1,5 @@
 public class SelectionSort {
+	
 	public static void main(String [] args) {
 		int arr [] = {8, 3, 5, 9, 21, 6, 5, -1, 20, 0}; 
 		selectionSort(arr);
