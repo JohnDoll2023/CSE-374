@@ -17,20 +17,20 @@ public class MergeSort {
 		}
 	}
 	
-	public static void merge(int arr[], int index, int split, int length) {
+	public static void merge(int arr[], int p, int q, int r) {
 		//create sizes for new arrays
-		int num1 = split - index + 1;
-		int num2 = length - split;
+		int num1 = q - p + 1;
+		int num2 = r - q;
 		//create left and right array
 		int[] left = new int[num1 + 1];
 		int[] right = new int[num2 + 1];
 		//fill left array with values from specified range from original array
 		for(int i = 0; i < num1; i++) {
-			left[i] = arr[index + i];
+			left[i] = arr[p + i];
 		}
 		//fill right array with values from specified range from original array
 		for(int i = 0; i < num2; i++) {
-			right[i] = arr[split + i];
+			right[i] = arr[q + i + 1];
 		}
 		//set array values to indicate end of array
 		left[num1] = Integer.MAX_VALUE;
@@ -39,7 +39,7 @@ public class MergeSort {
 		int i = 0;
 		int j = 0;
 		//combine left and right arrays back together
-		for(int k = index; k < length; k++) {
+		for(int k = p; k < r + 1; k++) {
 			//if value at left array index is less than value at index of right array, then set array to value of left array, otherwise set array to value of right array
 			if(left[i] <= right[j]) {
 				arr[k] = left[i];
