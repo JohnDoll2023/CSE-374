@@ -1,7 +1,7 @@
 public class RandomizedSelect {
 	public static void main(String[] args) {
 		int arr [] = {8, 3, 5, 9, 21, 6, 5, -1, 20, 0}; // -1, 0, 3, 5, 5, 6, 8, 9, 20, 21
-		int i = 10;
+		int i = 4;
 		System.out.println(randomizedSelect(arr, 0, arr.length - 1, i));
 		
 	}
