@@ -1,29 +1,20 @@
-public class RandomizedSelect {
+public class RandomizedQuickSort {
+	
 	public static void main(String[] args) {
-		int arr [] = {8, 3, 5, 9, 21, 6, 5, -1, 20, 0}; // -1, 0, 3, 5, 5, 6, 8, 9, 20, 21
-		int i = 2;
-		System.out.println(randomizedSelect(arr, 0, arr.length - 1, i));
-		
+		int arr [] = {8, 3, 5, 9, 21, 6, 5, -1, 20, 0}; 
+		quickSort(arr, 0, arr.length - 1);
+		for(int i = 0; i < arr.length; i++) {
+			System.out.println(arr[i]);
+		}
 	}
 	
-	public static int randomizedSelect(int arr[], int index, int length, int i) {
-		//if index equals the length then we have only one element left to choose
-		if(index == length) {
-			return arr[index];
-		}
-		//helper method to find pivot
-		int pivot = randomizedPartition(arr, index, length);
-		//how many values in the array are less than itself (k), represents how many elements in left portion including q
-		int k = pivot - index + 1;
-		//checks if our index equals the location where we partitioned
-		if(i == k) {
-			return arr[pivot];
-		//checks if i is less than k, indicating that we want to work with the values less than k in our new randomized select
-		} else if (i < k) {
-			return randomizedSelect(arr, index, pivot - 1, i);
-		} else {
-			//shift over i because we need to adjust for not having as many elements k since we split the array
-			return randomizedSelect(arr, pivot + 1, length, i - k);
+	public static void quickSort(int arr[], int index, int length) {
+		//check if our index has reached the end of the array
+		if(index < length) {
+			//partition the array
+			int split = randomizedPartition(arr, index, length);
+			quickSort(arr, index, split - 1);
+			quickSort(arr, split + 1, length);
 		}
 	}
 	
@@ -38,7 +29,7 @@ public class RandomizedSelect {
 		return partition(arr, index, length);
 	}
 	
-	public static int partition(int arr[], int index, int length) {
+	public static int partition(int arr[], int index, int length) {	
 		//set a our comparison value that all numbers to the left will be less than
 		int key = arr[length];
 		//location of last value that is lower than our key
